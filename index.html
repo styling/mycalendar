@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/trip-calendar.css">
+<style type="text/css">
+.calendar-input-wrap{position:relative;}
+.calendar{position:absolute;left: 0;}
+</style>
+<title>日历</title>
+</head>
+<body>
+	<h1>日历</h1>
+	<div class="demo">
+		<div class="calendar-input-wrap">
+			<span class="calendar-start-icon"></span>
+			<input type="text" class="J_Item" autocomplete="off">
+		</div>
+		<div class="calendar-input-wrap">
+			<span class="calendar-start-icon"></span>
+			<input type="text" class="J_Item" autocomplete="off">
+		</div><br>
+		<select></select>
+	</div>
+	<div class="content">
+
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript">
+$('.calendar-input-wrap').eq(0).Calendar({
+	isHoliday : true,
+	minDate : "2014-05-29",
+	date : new Date(),
+	_calendarClass : "calendar-bounding-box"
+})
+</script>
+</html>
